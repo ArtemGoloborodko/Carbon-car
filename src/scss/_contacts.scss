@@ -1,0 +1,176 @@
+@import "varilables";
+@import "mixins";
+
+/* ***********Контакты*************** */
+
+.section_bottom4 {
+    padding-bottom: 67px
+  }
+  
+  .contacts__zag {
+    @include section-zag();
+    line-height: none;
+    margin-bottom: 21px;
+  }
+  
+  [class*='ground-pane'] {
+    filter: grayscale(1);
+  }
+  
+  .map {
+    max-width: 850px;
+    height: 460px;
+  }
+  
+  .contacts__map {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 100;
+  
+    &__adress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 175px 50px 137px 60px;
+      background-color: rgba(32, 32, 32, 0.85);
+      max-width: 410px;
+      opacity: 1;
+      transition: opacity 2s ease-in-out;
+    }
+  
+    &__svg {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+  
+    &__zag {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: $colorText;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+  
+    &__text {
+      font-style: normal;
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: left;
+      color: $colorText;
+      margin-bottom: 10px;
+    }
+  
+    &__linktel {
+      display: flex;
+      padding-left: 4px;
+      
+      color: #FF6E30;
+    }
+  
+  }
+  
+  .cloce_map {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    pointer-events: none
+  }
+  
+  
+  .contacts__form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    width: 440px;
+    min-width: 300px;
+  
+    &__forms {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__zag {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: left;
+      color: $colorText;
+      font-size: 24px;
+      margin-bottom: 17px;
+    }
+  
+    &__text {
+    font-style: normal;
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: left;
+      color: $colorText;
+      margin-bottom: 14px;
+    }
+  
+    &__input {
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 23px 15px 23px;
+     
+      color: #999999;
+    }
+  
+    &__textarea {
+      height: 150px;
+      resize: none
+    }
+  
+    &__btn {
+      @include btn-reset();
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: #fff;
+      margin-top: 30px;
+      padding: 20px 40px;
+      background-color: #ff5900;
+      border-radius: 100px;
+    }
+
+
+  }
+
+  .contacts__form__btn:hover {
+    background-color: $colorText;
+    color: $colorBtn;  
+    outline: 3px solid $colorBtn;
+  }
+
+  .container__map {
+    position: relative;
+  }
+
+  .contacts-circle {
+    position: absolute;
+    background-color: $colorFon;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* не забываем о кроссбраузерности */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    bottom: -120px;
+    left: 620px;
+    z-index: 1;
+  }

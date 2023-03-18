@@ -1,0 +1,39 @@
+@import "varilables";
+
+
+@mixin list-reset() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin btn-reset() {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin container() {
+  max-width: $containerMaxWidth;
+  margin: 0 auto;
+  padding: $containerPadding;
+  background-image: none;
+}
+
+@mixin section-zag() {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 80px;
+  text-align: left;
+  color: $colorZag_1;
+  margin-bottom: 30px;
+  padding-left: 70px;
+}
