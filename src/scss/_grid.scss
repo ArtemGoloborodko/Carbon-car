@@ -52,13 +52,13 @@
 .grid_block-1 {
     grid-column: 1/4;
     grid-row: 1/1;
-    border-radius: 100px;
+    border-radius: 30px;
 }
 
 .grid_block-2 {
     grid-column: 4/9;
     grid-row: 1/1;
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 .grid_block-3 {
@@ -159,4 +159,12 @@
   
   .accordion_img-padding:not(:last-child) {
     padding-bottom: 20px;
+  }
+
+
+  .grid_galery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }

@@ -17,7 +17,7 @@ window.addEventListener('scroll', function() {
 })
 
 
-var swiper = new Swiper(".swiper", {
+/* var swiper = new Swiper(".swiper", {
     slidesPerView: 2,
     spaceBetween: 60,
 
@@ -53,6 +53,43 @@ var swiper = new Swiper(".swiper", {
             }
         }
 
+}); */
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next-unique',
+        prevEl: '.swiper-button-prev-unique',
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+  });
+
+/* gridimg */
+
+const penTitle = document.querySelector('.pen-title');
+const menu = document.querySelector('.js-menu');
+const menuTrigger = document.querySelectorAll('.js-menu-trigger');
+menuTrigger.forEach(btn => {
+  btn.addEventListener('click', function() {
+    menuTrigger.forEach(b => {
+      b.classList.toggle('menu-trigger--menu-open');
+    });
+    menu.classList.toggle('menu--open');
+  });
 });
 
 /* Табы */
@@ -170,3 +207,5 @@ new Accordion('.accordion-list', {
 	panelClass: 'accordion__content',
 	activeClass: 'accordion--active'
 });
+
+

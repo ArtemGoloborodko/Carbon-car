@@ -1,0 +1,13 @@
+@import "varilables";
+@import "mixins";
+
+.swiper_zag_galery {
+    margin-top: 52px;
+}
+
+.header__container-galery {
+    padding-top: 52px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

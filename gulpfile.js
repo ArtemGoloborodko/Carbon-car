@@ -85,7 +85,7 @@ const styles = () => {
 }
 
 const htmlInclude = () => {
-  return src(['./src/index.html'])
+  return src(['./src/index.html', './src/index_press.html', './src/index_galery.html'])
     .pipe(fileinclude({
       prefix: '@',
       basepath: '@file'
@@ -96,7 +96,7 @@ const htmlInclude = () => {
 }
 
 const imgToApp = () => {
-  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg', './src/img/**.mp4'])
+  return src(['./src/img/**.jpg', './src/img/**.JPG', './src/img/**.png', './src/img/**.jpeg', './src/img/**.mp4', './src/img/**.webp'])
     .pipe(dest('./app/img'))
 }
 
@@ -110,7 +110,7 @@ const clean = () => {
 }
 
 const scripts = () => {
-  return src('./src/js/main.js')
+  return src('./src/js/main.js', './src/js/accordion.min.js')
     .pipe(webpackStream({
       output: {
         filename: 'main.js',
@@ -144,10 +144,13 @@ const watchFiles = () => {
 
   watch('./src/scss/**/*.scss', styles)
   watch('./src/index.html', htmlInclude)
+  watch('./src/index_galery.html', htmlInclude)
+  watch('./src/index_press.html', htmlInclude)
   watch('./src/img/**.jpg', imgToApp)
   watch('./src/img/**.png', imgToApp)
   watch('./src/img/**.jpeg', imgToApp)
   watch('./src/img/**.mp4', imgToApp)
+  watch('./src/img/**.webp', imgToApp)
   watch('./src/img/**.svg', svgSprites)
   watch('./src/resources/**', resources)
   watch('./src/fonts/**.ttf', fonts)
@@ -190,7 +193,7 @@ const stylesBuild = () => {
 }
 
 const scriptsBuild = () => {
-  return src('./src/js/main.js')
+  return src('./src/js/main.js', './src/js/accordion.min.js')
     .pipe(webpackStream({
       output: {
         filename: 'main.js',

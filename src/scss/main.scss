@@ -19,6 +19,8 @@ html {
 @import "contacts";
 @import "footer";
 @import "accordion";
+@import "gridimg";
+@import "galery";
 
 
 textarea:focus,
@@ -265,7 +267,7 @@ button {
 }
 
 .prew {
-    background-image: url(/img/karbon.jpg);
+    background-image: url(/img/karbon.webp);
     background-size: cover;
     background-repeat: no-repeat;
     /* max-width: 1320px; */
@@ -388,13 +390,12 @@ button {
 }
 
 .general_img {
-    background-image: url(/img/grafit.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(/img/grafit.webp);
     width: 516px;
     height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 50px;
 }
 
 .section_bottom {
@@ -482,9 +483,79 @@ button {
     }
 }
 
+.Verification {
+    opacity: 0;
+}
+
+
+/* Персональные данные */
+
+h2 {
+    margin: 0;
+}
+
+.text_data{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.data {
+    overflow: auto;
+   
+    height: 530px;
+}
+
+.hero_date {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)), url("/img/bg.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__container-date {
+    padding-top: 110px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.data_h2 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 26px;
+    color: #FFFFFF;
+    text-align: center; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+@media (max-width:1200px) {
+
+    .data {
+        overflow: auto;
+        width: 100%;
+    }
+
+    .data_h2 {
+        font-size: 27px;
+        line-height: 26px;
+    }
+    
+}
+
+
+
+
+
 @media (max-width : 800px) {
     .telegram-button {
-        bottom: 5px;
+        bottom: 62px;
         /*отступ кнопки снизу от экрана*/
         right: 0;
         /*отступ кнопки слева от экрана(right - справа)*/
@@ -556,6 +627,10 @@ button {
 
     .contacts-circle {
         left: 400px;
+    }
+
+    .contacts__form .footer_aggre {
+        bottom: 88px;
     }
 }
 
@@ -834,8 +909,8 @@ button {
 
     .swiper-slide {
         max-width: 450px !important;
-        margin-right: 37px !important;
-        height: 300px;
+        margin-right: 29px !important;
+        height: 450px;
     }
 
     .tabs-nav__btn {
