@@ -17,7 +17,7 @@ window.addEventListener('scroll', function() {
 })
 
 
-/* var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".swiper", {
     slidesPerView: 2,
     spaceBetween: 60,
 
@@ -53,9 +53,9 @@ window.addEventListener('scroll', function() {
             }
         }
 
-}); */
+});
 
-var swiper = new Swiper(".mySwiper", {
+/* var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -76,7 +76,7 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-  });
+  }); */
 
 /* gridimg */
 
